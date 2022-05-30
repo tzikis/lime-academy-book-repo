@@ -22,6 +22,8 @@ async function deployLibraryContract() {
     console.log('Library Contract address: ', libraryContract.address);
     console.log('Done!');
 
+    console.log('Remaining account balance:', (await deployer.getBalance()).toString()); // We are printing the account balance
+
     await delay(30);
 
     await hre.run("verify:verify", {
